@@ -1,0 +1,18 @@
+.notFound {
+  background: #8e9eab; /* fallback for old browsers */
+  background: linear-gradient(to left, $colorThemeFaded, $colorGrayLight);
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+
+    @media (max-width: $screenSmMax) {
+      @mixin font-size 22;
+    }
+  }
+}

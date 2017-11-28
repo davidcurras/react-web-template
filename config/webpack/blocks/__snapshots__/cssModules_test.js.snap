@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generates client dev config 1`] = `
+Object {
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": undefined,
+        "use": Object {
+          "extract": Object {
+            "use": Array [
+              Object {
+                "loader": "css-loader",
+                "options": Object {
+                  "importLoaders": 1,
+                  "localIdentName": "[path][name]__[local]__[hash:base64:3]",
+                  "minimize": false,
+                  "modules": true,
+                },
+              },
+              "postcss-loader",
+            ],
+          },
+        },
+      },
+      Object {
+        "exclude": undefined,
+        "test": undefined,
+        "use": Object {
+          "extract": Object {
+            "use": Array [
+              Object {
+                "loader": "css-loader",
+                "options": Object {
+                  "importLoaders": 1,
+                  "localIdentName": "[path][name]__[local]__[hash:base64:3]",
+                  "minimize": false,
+                  "modules": false,
+                },
+              },
+              "postcss-loader",
+            ],
+          },
+        },
+      },
+    ],
+  },
+  "plugins": Array [
+    ExtractTextPlugin {
+      "apply": [Function],
+      "applyAdditionalInformation": [Function],
+      "extract": [Function],
+      "loader": [Function],
+      "mergeNonInitialChunks": [Function],
+      "renderExtractedChunk": [Function],
+    },
+  ],
+}
+`;
+
+exports[`generates client prod config 1`] = `
+Object {
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": undefined,
+        "use": Object {
+          "extract": Object {
+            "use": Array [
+              Object {
+                "loader": "css-loader",
+                "options": Object {
+                  "importLoaders": 1,
+                  "localIdentName": "[hash:base64:8]",
+                  "minimize": true,
+                  "modules": true,
+                },
+              },
+              "postcss-loader",
+            ],
+          },
+        },
+      },
+      Object {
+        "exclude": undefined,
+        "test": undefined,
+        "use": Object {
+          "extract": Object {
+            "use": Array [
+              Object {
+                "loader": "css-loader",
+                "options": Object {
+                  "importLoaders": 1,
+                  "localIdentName": "[hash:base64:8]",
+                  "minimize": true,
+                  "modules": false,
+                },
+              },
+              "postcss-loader",
+            ],
+          },
+        },
+      },
+    ],
+  },
+  "plugins": Array [
+    ExtractTextPlugin {
+      "apply": [Function],
+      "applyAdditionalInformation": [Function],
+      "extract": [Function],
+      "loader": [Function],
+      "mergeNonInitialChunks": [Function],
+      "renderExtractedChunk": [Function],
+    },
+  ],
+}
+`;
+
+exports[`generates server dev config 1`] = `
+Object {
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": undefined,
+        "use": Array [
+          Object {
+            "loader": "css-loader/locals",
+            "options": Object {
+              "importLoaders": 0,
+              "localIdentName": "[path][name]__[local]__[hash:base64:3]",
+              "minimize": false,
+              "modules": true,
+            },
+          },
+          "postcss-loader",
+        ],
+      },
+      Object {
+        "exclude": undefined,
+        "test": undefined,
+        "use": Array [
+          Object {
+            "loader": "css-loader/locals",
+            "options": Object {
+              "importLoaders": 0,
+              "localIdentName": "[path][name]__[local]__[hash:base64:3]",
+              "minimize": false,
+              "modules": false,
+            },
+          },
+          "postcss-loader",
+        ],
+      },
+    ],
+  },
+}
+`;
+
+exports[`generates server prod config 1`] = `
+Object {
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": undefined,
+        "use": Array [
+          Object {
+            "loader": "css-loader/locals",
+            "options": Object {
+              "importLoaders": 0,
+              "localIdentName": "[hash:base64:8]",
+              "minimize": true,
+              "modules": true,
+            },
+          },
+          "postcss-loader",
+        ],
+      },
+      Object {
+        "exclude": undefined,
+        "test": undefined,
+        "use": Array [
+          Object {
+            "loader": "css-loader/locals",
+            "options": Object {
+              "importLoaders": 0,
+              "localIdentName": "[hash:base64:8]",
+              "minimize": true,
+              "modules": false,
+            },
+          },
+          "postcss-loader",
+        ],
+      },
+    ],
+  },
+}
+`;

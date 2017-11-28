@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`webpack config matches snapshot 1`] = `
+Object {
+  "entry": Object {
+    "bundle": Array [
+      "sanitize.css/sanitize.css",
+      "tachyons-clears",
+      "tachyons-display",
+      "tachyons-flexbox",
+      "tachyons-position",
+      "tachyons-spacing",
+      "tachyons-text-align",
+      "tachyons-vertical-align",
+      "tachyons-widths",
+      "./src/styles/fonts.css",
+      "./src/styles/app.css",
+      "./src/index.browser.js",
+    ],
+  },
+  "module": Object {
+    "loaders": Array [],
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.\\(js\\|jsx\\)\\$/,
+        "use": Object {
+          "loader": "babel-loader",
+          "options": Object {
+            "babelrc": false,
+            "cacheDirectory": false,
+            "plugins": Array [
+              "transform-class-properties",
+              "transform-object-assign",
+            ],
+            "presets": Array [
+              Array [
+                "env",
+                Object {
+                  "loose": true,
+                  "modules": false,
+                  "useBuiltIns": "entry",
+                },
+              ],
+              "react",
+              "stage-3",
+            ],
+          },
+        },
+      },
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.css\\$/,
+        "use": Object {
+          "extract": Object {
+            "use": Array [
+              Object {
+                "loader": "css-loader",
+                "options": Object {
+                  "importLoaders": 1,
+                  "localIdentName": "[path][name]__[local]__[hash:base64:3]",
+                  "minimize": false,
+                  "modules": true,
+                },
+              },
+              "postcss-loader",
+            ],
+          },
+        },
+      },
+      Object {
+        "exclude": undefined,
+        "test": /node_modules\\.\\*\\\\\\.css\\$/,
+        "use": Object {
+          "extract": Object {
+            "use": Array [
+              Object {
+                "loader": "css-loader",
+                "options": Object {
+                  "importLoaders": 1,
+                  "localIdentName": "[path][name]__[local]__[hash:base64:3]",
+                  "minimize": false,
+                  "modules": false,
+                },
+              },
+              "postcss-loader",
+            ],
+          },
+        },
+      },
+      Object {
+        "test": /\\\\\\.\\(eot\\|otf\\)\\$/,
+        "use": "file-loader",
+      },
+      Object {
+        "test": /\\\\\\.\\(mp4\\|webm\\)\\$/,
+        "use": "file-loader",
+      },
+      Object {
+        "test": /\\\\\\.\\(gif\\|ico\\|jpg\\|jpeg\\|png\\|svg\\|webp\\)\\$/,
+        "use": "url-loader?limit=10000",
+      },
+      Object {
+        "test": /\\\\\\.\\(woff\\|woff2\\)\\$/,
+        "use": "url-loader?limit=10000&mimetype=application/font-woff",
+      },
+      Object {
+        "test": /\\\\\\.\\(ttf\\)\\$/,
+        "use": "url-loader?limit=10000&mimetype=application/octet-stream",
+      },
+    ],
+  },
+  "output": Object {
+    "chunkFilename": "[name]-[chunkhash].js",
+    "filename": "[name].js",
+    "path": "<PROJECT_ROOT>/build/public",
+    "publicPath": "/static/",
+  },
+  "plugins": Array [
+    ExtractTextPlugin {
+      "apply": [Function],
+      "applyAdditionalInformation": [Function],
+      "extract": [Function],
+      "loader": [Function],
+      "mergeNonInitialChunks": [Function],
+      "renderExtractedChunk": [Function],
+    },
+    CommonsChunkPlugin {
+      "async": undefined,
+      "children": undefined,
+      "chunkNames": Array [
+        "vendor",
+      ],
+      "filenameTemplate": undefined,
+      "ident": "<PROJECT_ROOT>/node_modules/@webpack-blocks/webpack2/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js0",
+      "minChunks": [Function],
+      "minSize": undefined,
+      "selectedChunks": undefined,
+    },
+    DefinePlugin {
+      "definitions": Object {
+        "process.env": Object {
+          "NODE_ENV": "\\"test\\"",
+        },
+      },
+    },
+    HashedModuleIdsPlugin {
+      "options": Object {
+        "hashDigest": "base64",
+        "hashDigestLength": 4,
+        "hashFunction": "md5",
+      },
+    },
+    WebpackChunkHash {
+      "additionalHashContent": [Function],
+      "algorithm": "md5",
+      "digest": "hex",
+    },
+    Object {
+      "apply": [Function],
+    },
+    AssetsWebpackPlugin {
+      "options": Object {
+        "filename": "assets.json",
+        "fullPath": true,
+        "path": "<PROJECT_ROOT>/build",
+        "prettyPrint": false,
+        "processOutput": [Function],
+        "update": false,
+      },
+      "writer": [Function],
+    },
+    CommonsChunkPlugin {
+      "async": undefined,
+      "children": undefined,
+      "chunkNames": Array [
+        "manifest",
+      ],
+      "deepChildren": undefined,
+      "filenameTemplate": undefined,
+      "ident": "<PROJECT_ROOT>/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js0",
+      "minChunks": Infinity,
+      "minSize": undefined,
+      "selectedChunks": undefined,
+    },
+    ChunkManifestPlugin {
+      "inlineManifest": false,
+      "manifestFilename": "../chunk-manifest.json",
+      "manifestVariable": "__MANI_FOR_WEBPACK__",
+    },
+  ],
+  "resolve": Object {
+    "alias": Object {
+      "config": "<PROJECT_ROOT>/config",
+      "server": "<PROJECT_ROOT>/server",
+      "src": "<PROJECT_ROOT>/src",
+      "static": "<PROJECT_ROOT>/static",
+    },
+    "extensions": Array [
+      ".js",
+      ".json",
+      ".web.js",
+    ],
+  },
+  "target": "web",
+}
+`;

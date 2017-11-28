@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Profile> renders the Profile content 1`] = `
+<div
+  className="profile"
+>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    title="Profile"
+  />
+  <withRouter(Connect(RequireAuth)) />
+  <div
+    className="content"
+  >
+    Profile page
+    <ul>
+      <li />
+      <li />
+      <li />
+    </ul>
+    <Link
+      replace={false}
+      to="/home"
+    >
+      Back
+    </Link>
+    <button
+      onClick={[Function]}
+    >
+      Refresh
+    </button>
+    <div
+      className="error"
+    />
+  </div>
+</div>
+`;

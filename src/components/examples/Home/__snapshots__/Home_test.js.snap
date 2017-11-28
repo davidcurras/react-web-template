@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Home page content 1`] = `
+<div
+  className="home"
+>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    title="Home"
+  />
+  This is the app...
+  <ul>
+    <li>
+      This is a test item
+    </li>
+  </ul>
+  <Link
+    replace={false}
+    to="/profile"
+  >
+    <div
+      className="logo link"
+    />
+  </Link>
+  <Link
+    replace={false}
+    to="/todos"
+  >
+    <div
+      className="facebookIcon link"
+    />
+  </Link>
+  <withRouter(Connect(RequireAuth))>
+    <button
+      onClick={[Function]}
+    >
+      Logout
+    </button>
+  </withRouter(Connect(RequireAuth))>
+</div>
+`;

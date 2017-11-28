@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Todos> renders the Todos content 1`] = `
+<div
+  className="todos"
+>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    title="Todos"
+  />
+  <div
+    className="content"
+  >
+    Todos page
+    <ul />
+    <Link
+      replace={false}
+      to="/home"
+    >
+      Back
+    </Link>
+    <button
+      onClick={[Function]}
+    >
+      Filter Done
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Filter Current
+    </button>
+  </div>
+</div>
+`;
